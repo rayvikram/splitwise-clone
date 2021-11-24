@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "7cb4bd60-afe3-4db6-a35a-5b90eec58108",
+		"name": "SPLITWISE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET AUTH TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/users/token/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER ACTIVITY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/expense/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"expense",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD EXPENSE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 200,\n    \"payer\": 1,\n    \"payee\": 2\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/expense/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"expense",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD GROUP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Family\",\n    \"users\": [\n        1,2\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/group/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET GROUP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/group/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET FRIENDS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/friend/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD FRIEND",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"friends\": [\n        \"vikram@gmail.com\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/friend/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT FRIEND",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"friends\": [\n        \"vikram@gmail.com\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/friend/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend",
+						"1",
+						""
+					]
+				},
+				"description": "Remove or add friends"
+			},
+			"response": []
+		},
+		{
+			"name": "EXPENSE LIST FOR FRIENDS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/expense/friend/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"expense",
+						"friend",
+						""
+					]
+				},
+				"description": "TOTAL AMOUNT TO RECEIVE FROM FRIENDS"
+			},
+			"response": []
+		},
+		{
+			"name": "TOTAL/OVERALL PAY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/expense/overall/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"expense",
+						"overall",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SETTLE UP API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"friend_email\": \"vikram@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/expense/settleup/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"expense",
+						"settleup",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,3 @@
-# splitwise-clone
-Holds API for spliwise clone!!
 # To start the project using docker (recommended)
 - `docker-compose up` 
 
@@ -77,3 +75,4 @@ Holds API for spliwise clone!!
             "friend_email": "vikram@gmail.com"
         }
 
+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
