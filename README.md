@@ -74,5 +74,3 @@
         {
             "friend_email": "vikram@gmail.com"
         }
-
-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
