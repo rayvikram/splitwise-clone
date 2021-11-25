@@ -1,7 +1,7 @@
 # To start the project using docker (recommended)
 - `docker-compose up` 
 
-# To start the project using docker
+# To start the project directly
 1. create virtual env `python -m venv .venv`
 2. activate `source .venv/bin/activate` then install dependency `pip install -r requirements.txt`
 3. `python manage.py runserver`
