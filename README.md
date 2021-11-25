@@ -14,9 +14,6 @@
 
 # Features
 - user can login and get token
-- 
-# Authorization
-- Token Based Authentication
 - Get all expensed added by him
 - Create expense
 - create group
@@ -27,6 +24,10 @@
 - get expense for type: friend
 - Get overall expense in splitwise
 - settleup payment with a friend
+
+ 
+# Authorization
+- Token Based Authentication
 
 # API Endpoints
 ## Unauthenticated APIs
