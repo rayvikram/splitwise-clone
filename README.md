@@ -3,7 +3,7 @@
 
 # To start the project using docker
 1. create virtual env `python -m venv .venv`
-2. activate `source .venv/bin/activate`
+2. activate `source .venv/bin/activate` then install dependency `pip install -r requirements.txt`
 3. `python manage.py runserver`
 # Overview
 - This have POSTMAN collection
