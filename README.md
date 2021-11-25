@@ -87,4 +87,11 @@
     
 ![image](https://user-images.githubusercontent.com/22349420/143372304-29f94a95-c104-45bf-8c61-a6d20ff3c10c.png)
     
+## From POSTMAN
+ ![image](https://user-images.githubusercontent.com/22349420/143372839-05470d9c-365c-4209-944e-1991bfa5949e.png)
+ ![image](https://user-images.githubusercontent.com/22349420/143372876-26b013df-0542-4303-9dac-ba36efa1f89e.png)
+ ![image](https://user-images.githubusercontent.com/22349420/143372912-fbeb0988-026e-43bf-9179-2ade0a74aa9b.png)
+ ![image](https://user-images.githubusercontent.com/22349420/143372964-19da3550-15a8-4344-8271-b16b13c6516b.png)
+
+
 
